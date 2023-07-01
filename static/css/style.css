@@ -1,6 +1,7 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     background-color: lightgray;
+    padding-bottom: 20px;
     margin: 0;
 }
 
@@ -11,6 +12,12 @@ header {
     text-align: center;
     display: block;
     padding: 30px;
+}
+
+img {
+    height: 450px;
+    width: 1000px;
+
 }
 
 #navigationBar {
