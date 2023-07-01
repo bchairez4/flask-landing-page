@@ -26,4 +26,13 @@ header {
     font-weight: bold;
     display: inline-block;
     padding: 15px;
-}   
+}
+
+#navigationBar a:hover {
+    color: #ee4920;
+}
+
+#content {
+    padding-left: 15%;
+    padding-right: 15%;
+}
