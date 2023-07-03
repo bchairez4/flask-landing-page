@@ -1,3 +1,6 @@
+# Brian Chairez
+# Flask Pet Adoption Landing Page
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
