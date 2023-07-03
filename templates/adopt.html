@@ -2,12 +2,6 @@
 
 {% block title %} Adopt {% endblock %}
 
-{% block navbar %} 
-    {% for navbarItem in navbarList %}
-        <a href=""> {{navbarItem}} </a>
-    {% endfor %}
-{% endblock %}
-
 {% block body %}
     <h1>Adopt</h1>
     {% for adopt in adoptionList %}
