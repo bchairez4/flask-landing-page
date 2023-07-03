@@ -6,8 +6,9 @@
         <title>{% block title%} {% endblock%} - Landing Page</title>
     </head>
     <body>
-        <header id="titleBanner">
-            <h1>Pet Adoption Landing Page</h1>
+        <header id="titleBanner" class="headerBanner">
+            <h1 id="banner">Pet Adoption Landing Page</h1>
+            <img src="static/images/adopt-logo.png" id="logo" alt="logo">
         </header>
         <div id="navigationBar">
             {% block navbar %} {% endblock %}
