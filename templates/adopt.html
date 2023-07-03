@@ -9,12 +9,12 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Adopt Today</h1>
+    <h1>Adopt</h1>
     {% for adopt in adoptionList %}
-        <h2>{{adopt.get('name')}}</h2>
+        <h2 id="petName">{{adopt.get('name')}} ({{adopt.get('animal')|title}}) - Age: {{adopt.get('age')}}</h2>
         <img src={{adopt.get('img_src')}} alt={{adopt.get('name')}}>
         <p>
-            Adopt {{adopt.get('name')}} today. A {{adopt.get('animal')}} of age {{adopt.get('age')}} looking for a new home!
+            Adopt {{adopt.get('name')}} today and give this {{adopt.get('breed')}} a new home!
         </p>
         <h3>More about {{adopt.get('name')}}</h3>
         <p>
