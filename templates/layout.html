@@ -11,7 +11,9 @@
             <img src="static/images/adopt-logo.png" id="logo" alt="logo">
         </header>
         <div id="navigationBar">
-            {% block navbar %} {% endblock %}
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('adopt') }}">Adopt</a>
+            <a href="{{ url_for('about') }}">About</a>
         </div>
 
         <div id="content">
