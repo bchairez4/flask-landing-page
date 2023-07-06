@@ -3,17 +3,19 @@
     <head>
         <meta name="viewport" content="initial-scale=1, width=device-width">
         <link rel="stylesheet" href="static/css/style.css">
+        <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
         <title>{% block title%} {% endblock%} - Landing Page</title>
     </head>
     <body>
-        <header id="titleBanner" class="headerBanner">
-            <h1 id="banner">Pet Adoption Landing Page</h1>
+        <header id="headerBanner">
+            <h1>Pet Adoption Landing Page</h1>
             <img src="static/images/adopt-logo.png" id="logo" alt="logo">
         </header>
         <div id="navigationBar">
             <a href="{{ url_for('index') }}">Home</a>
             <a href="{{ url_for('adopt') }}">Adopt</a>
             <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('reviews') }}">Reviews</a>
         </div>
 
         <div id="content">
