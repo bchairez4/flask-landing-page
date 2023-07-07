@@ -1,5 +1,5 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: lightgray;
     padding-bottom: 20px;
     margin: 0;
@@ -72,6 +72,7 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 .reviewImages {
@@ -88,8 +89,4 @@ img {
 .reviewRating {
     font-size: x-large;
     margin: 0;
-}
-
-.reviewComment {
-    padding-bottom: 50px;
 }
