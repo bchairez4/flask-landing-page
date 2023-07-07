@@ -5,11 +5,13 @@
 {% block body %}
     <h1> Hear People's Experiences </h1>
     {% for review in reviewList %}
-        <img class="reviewImages" src="{{ review.get('img_src') }}" alt="{{ review.get('petName') }}">
-        <h2 class="reviewTitle">{{ review.get('name') }} & {{ review.get('petName') }}</h2>
-        <h3 class="reviewRating">{{ review.get('rating') }}</h3>
-        <p>
-            Proin aliquam lorem vitae neque ultricies pretium. Morbi eu rhoncus massa, non dictum orci. Maecenas consectetur cursus posuere. Cras cursus viverra metus, et ullamcorper velit pellentesque non. Integer velit sem, vestibulum at est euismod, fermentum convallis ante. Etiam iaculis odio et tortor cursus, non commodo ante finibus. Nam faucibus, mauris vitae mollis tempus, eros justo consectetur magna, at iaculis diam metus aliquet augue. Nulla sollicitudin elit at nisi ultrices, sit amet aliquam leo rutrum.
-        </p>
+        <div class="reviewPost">
+            <img class="reviewImages" src="{{ review.get('img_src') }}" alt="{{ review.get('petName') }}">
+            <h2 class="reviewTitle">{{ review.get('name') }} & {{ review.get('petName') }}</h2>
+            <h3 class="reviewRating">{{ review.get('rating') }}</h3>
+            <p>
+                Proin aliquam lorem vitae neque ultricies pretium. Morbi eu rhoncus massa, non dictum orci. Maecenas consectetur cursus posuere. Cras cursus viverra metus, et ullamcorper velit pellentesque non. Integer velit sem, vestibulum at est euismod, fermentum convallis ante. Etiam iaculis odio et tortor cursus, non commodo ante finibus. Nam faucibus, mauris vitae mollis tempus, eros justo consectetur magna, at iaculis diam metus aliquet augue. Nulla sollicitudin elit at nisi ultrices, sit amet aliquam leo rutrum.
+            </p>
+        </div>
     {% endfor %}
 {% endblock %}
