@@ -8,7 +8,7 @@
         <h2 class="petName">{{ adopt.get('name') }} ({{ adopt.get('animal')|title }}) - Age: {{ adopt.get('age') }}</h2>
         <img class="adoptImages" src="{{ adopt.get('img_src') }}" alt="{{ adopt.get('name') }}" >
         <p>
-            Adopt {{adopt.get('name')}} today and give this {{adopt.get('breed')}} a new home!
+            <i>Adopt {{adopt.get('name')}} today and give this {{adopt.get('breed')}} a new home!</i>
         </p>
         <h3>More about {{ adopt.get('name') }}</h3>
         <p class="adoptDescription">
