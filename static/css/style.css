@@ -69,9 +69,8 @@ img {
 }
 
 .reviewPost {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: auto;
     padding-bottom: 50px;
 }
 
