@@ -17,7 +17,6 @@ header {
 img {
     height: 425px;
     width: 1000px;
-
 }
 
 #navigationBar {
@@ -32,7 +31,7 @@ img {
     font-size: 20px;
     font-weight: bold;
     display: inline-block;
-    padding: 15px;
+    padding: 20px;
 }
 
 #navigationBar a:hover {
@@ -57,27 +56,37 @@ img {
     align-self: center;
 }
 
-.petName {
+.adoptPost {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 45px;
+}
+
+.petPostName {
     font-family: Arial, Helvetica, sans-serif;
     color: hsl(45, 100%, 29%);
     padding-bottom: 10px;
     margin: 0;
 }
 
-.adoptImages {
+.adoptPostImage {
     min-width: 200px;
     max-width: 600px;
     min-height: 200px;
     max-height: 600px;
 }
 
-.adoptDescription {
-    padding-bottom: 45px;
+.adoptPostInfo {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.adoptPostMore {
+    margin-bottom: 0;
 }
 
 .reviewPost {
     display: grid;
-    grid-template-columns: auto;
     grid-template-rows: 125px;
     padding-bottom: 150px;
 }
@@ -89,10 +98,10 @@ img {
 }
 
 .reviewPostInfo {
-    padding-left: 500px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     display: grid;
     grid-template-columns: 600px;
+    padding-left: 500px;
 }
 
 .reviewPostTitle {
