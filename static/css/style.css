@@ -14,6 +14,13 @@ header {
     padding: 30px;
 }
 
+footer {
+    font-size: xx-small;
+    font-family: sans-serif;
+    padding-top: 15px;
+    padding-left: 44%;
+}
+
 img {
     height: 425px;
     width: 1000px;
