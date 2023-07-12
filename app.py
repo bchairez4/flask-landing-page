@@ -29,7 +29,7 @@ def about():
 def reviews():
     reviewList = [
         {'img_src': 'static/images/adopt-review-1.jpg', 'name': 'John Doe', 'petName': 'Rodolfo', 'rating': 'Outstanding'},
-        {'img_src': 'static/images/adopt-review-2.jpg', 'name': 'Jane Doe', 'petName': 'Stinky', 'rating': 'Great'},
+        {'img_src': 'static/images/adopt-review-2.jpg', 'name': 'Jane Dane', 'petName': 'Stinky', 'rating': 'Great'},
         {'img_src': 'static/images/adopt-review-3.jpg', 'name': 'Sally Sal', 'petName': 'Teacup', 'rating': 'In Love'},
         {'img_src': 'static/images/adopt-review-4.jpg', 'name': 'Billy Bob', 'petName': 'Annihilator', 'rating': 'Amazing'}
     ]
