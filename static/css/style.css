@@ -17,13 +17,15 @@ header {
 footer {
     font-size: xx-small;
     font-family: sans-serif;
-    padding-top: 15px;
+    padding-top: 25px;
     padding-left: 44%;
 }
 
 img {
     height: 425px;
     width: 1000px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #navigationBar {
@@ -42,7 +44,7 @@ img {
 }
 
 #navigationBar a:hover {
-    color: #ee4920;
+    color: hsl(10, 100%, 45%);
 }
 
 #content {
@@ -57,10 +59,17 @@ img {
 }
 
 #logo {
-    padding-left: 15px;
     width: 69px;
     height: 69px;
     align-self: center;
+    padding-left: 15px;
+}
+
+.sectionTitle {
+    color: hsl(44, 100%, 28%);
+    font-size: larger;
+    padding-top: 5px;
+    margin: 0;
 }
 
 .adoptPost {
@@ -111,7 +120,7 @@ img {
 
 .reviewPostTitle {
     font-size: x-large;
-    color: hsl(261, 100%, 50%);
+    color: hsl(261, 98%, 45%);
 }
 
 .reviewPostRating {
