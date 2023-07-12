@@ -77,10 +77,8 @@ img {
 }
 
 .adoptPostImage {
-    min-width: 200px;
-    max-width: 600px;
-    min-height: 200px;
-    max-height: 600px;
+    width: 500px;
+    height: auto;
 }
 
 .adoptPostInfo {
