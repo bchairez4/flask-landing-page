@@ -1,7 +1,13 @@
 # Brian Chairez
 # Flask Pet Adoption Landing Page
 
+import sqlite3
 from flask import Flask, render_template
+
+def get_db_connection():
+    connection = sqlite3.connect('database.db')
+    connection.row_factory = sqlite3.Row
+    return connection
 
 app = Flask(__name__)
 
@@ -34,6 +40,13 @@ def reviews():
         {'img_src': 'static/images/adopt-review-4.jpg', 'name': 'Billy Bob', 'petName': 'Annihilator', 'rating': 'Amazing'}
     ]
     return render_template('reviews.html', reviewList=reviewList)
+
+@app.route('/community')
+def community():
+    conn = get_db_connection()
+    posts = conn.execute('SELECT * FROM posts').fetchall()
+    conn.close()
+    return render_template('community.html', posts=posts)
 
 def main():
     app.run()
