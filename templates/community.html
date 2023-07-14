@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %} Community {% endblock %}
+
+{% block body %}
+    <h1>Community Blog</h1>
+    {% for post in posts %}
+        <h2>{{ post['title'] }}</h2>
+        <span>{{ post['created'] }}</span>
+    {% endfor %}
+{% endblock %}
