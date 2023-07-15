@@ -5,7 +5,23 @@
 {% block body %}
     <h1>Community Blog</h1>
     {% for post in posts %}
-        <h2>{{ post['title'] }}</h2>
-        <span>{{ post['created'] }}</span>
+        <div class="blogPost">
+            <h2>{{ post['title'] }}</h2>
+            <div>{{ post['content'] }}</div>
+        </div>
     {% endfor %}
+
+    <form method="post">
+        <div class="blogPostTitle">
+            <label for="title">Title</label>
+            <input type="text" name="title" placeholder="Post Title" value="{{ request.form['title'] }}">
+        </div>
+        <div class="blogPostContent">
+            <label for="content">Content</label>
+            <textarea name="content" placeholder="Post Content">{{ request.form['content'] }}</textarea>
+        </div>
+        <button class="blogPostSubmit" type="submit">
+            Post
+        </button>
+    </form>
 {% endblock %}
