@@ -44,7 +44,7 @@ def reviews():
 
 @app.route('/community', methods=('GET', 'POST'))
 def community():
-    if request.method == "POST":
+    if request.method == 'POST':
         title = request.form['title']
         content = request.form['content']
 
