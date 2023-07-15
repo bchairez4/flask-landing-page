@@ -2,7 +2,7 @@
 # Flask Pet Adoption Landing Page
 
 import sqlite3
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for, flash
 
 def get_db_connection():
     connection = sqlite3.connect('database.db')
@@ -10,6 +10,7 @@ def get_db_connection():
     return connection
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = ' REPLACE WITH YOUR SECRET KEY '
 
 @app.route('/')
 def index():
@@ -41,11 +42,26 @@ def reviews():
     ]
     return render_template('reviews.html', reviewList=reviewList)
 
-@app.route('/community')
+@app.route('/community', methods=('GET', 'POST'))
 def community():
-    conn = get_db_connection()
-    posts = conn.execute('SELECT * FROM posts').fetchall()
-    conn.close()
+    if request.method == "POST":
+        title = request.form['title']
+        content = request.form['content']
+
+        if not title:
+            flash('Post title is required!')
+        elif not content:
+            flash('Post content is required!')
+        else:
+            conn = get_db_connection()
+            conn.execute('INSERT INTO posts (title, content) VALUES (?, ?)', (title, content))
+            conn.commit()
+            conn.close()
+            return redirect(url_for('community'))
+    else:
+        conn = get_db_connection()
+        posts = conn.execute('SELECT * FROM posts').fetchall()
+        conn.close() 
     return render_template('community.html', posts=posts)
 
 def main():
