@@ -128,3 +128,54 @@ img {
     font-size: x-large;
     margin: 0;
 }
+
+.blogPost {
+    border: 2px hsl(0, 0%, 11%) solid;
+    border-radius: 2px;
+    border-collapse: collapse;
+    display: grid;
+    grid-template-rows: 65px 45px;
+    padding-left: 25px;
+}
+
+.postForm {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.blogPostTitle {
+    display: grid;
+    grid-template-columns: 75px 520px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.blogPostContent {
+    display: grid;
+    grid-template-columns: 75px 600px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.blogPostTitleBox {
+    resize: none;
+    width: 65%;
+}
+
+.blogPostContentBox {
+    resize: none;
+    width: 95%; 
+    font-family: sans-serif;
+}
+
+.blogPostSubmit {
+    width: 75px;
+    height: 35px;
+    color: hsl(249, 70%, 26%);
+    background-color: hsl(42, 100%, 50%);
+    border: none;
+    align-self: center;
+    margin: 10px;
+    cursor: pointer;
+}
