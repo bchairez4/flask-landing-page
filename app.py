@@ -2,12 +2,21 @@
 # Flask Pet Adoption Landing Page
 
 import sqlite3
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for, flash, abort
 
 def get_db_connection():
     connection = sqlite3.connect('database.db')
     connection.row_factory = sqlite3.Row
     return connection
+
+def get_post(postID):
+    conn = get_db_connection()
+    post = conn.execute('SELECT * FROM posts WHERE id = ?', (postID,)).fetchone()
+    conn.close()
+    if post == None:
+        abort(404, description='Resource not found')
+    return post
+        
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = ' REPLACE WITH YOUR SECRET KEY '
@@ -62,7 +71,27 @@ def community():
         conn = get_db_connection()
         posts = conn.execute('SELECT * FROM posts').fetchall()
         conn.close() 
+
     return render_template('community.html', posts=posts)
+
+@app.route('/<int:postID>/edit', methods=('GET', 'POST'))
+def edit(postID):
+    post = get_post(postID)
+
+    if request.method == 'POST':
+        title = request.form['title']
+        content = request.form['content']
+
+        if not title or not content:
+            flash('Content required!')
+        else:
+            conn = get_db_connection()
+            conn.execute('UPDATE posts SET title = ?, content = ?' 'WHERE id = ?', (title, content, postID))
+            conn.commit()
+            conn.close()
+            return redirect(url_for('community'))
+
+    return render_template('edit.html', post=post)
 
 def main():
     app.run()
