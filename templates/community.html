@@ -10,15 +10,18 @@
             <div>{{ post['content'] }}</div>
         </div>
     {% endfor %}
-
-    <form method="post">
+    
+    <div>
+        <h2>Post to the Community!</h2>
+    </div>
+    <form class="postForm" method="post">
         <div class="blogPostTitle">
-            <label for="title">Title</label>
-            <input type="text" name="title" placeholder="Post Title" value="{{ request.form['title'] }}">
+            <label for="title">Title:</label>
+            <input class="blogPostTitleBox" type="text" name="title" placeholder="Post Title" value="{{ request.form['title'] }}">
         </div>
         <div class="blogPostContent">
-            <label for="content">Content</label>
-            <textarea name="content" placeholder="Post Content">{{ request.form['content'] }}</textarea>
+            <label for="content">Content:</label>
+            <textarea class="blogPostContentBox" name="content" placeholder="Post Content" rows="5">{{ request.form['content'] }}</textarea>
         </div>
         <button class="blogPostSubmit" type="submit">
             Post
