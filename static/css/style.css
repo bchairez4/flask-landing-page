@@ -184,6 +184,7 @@ img {
     height: 35px;
     color: hsl(249, 70%, 26%);
     background-color: hsl(42, 100%, 50%);
+    font-size: large;
     border: none;
     align-self: center;
     margin: 10px;
