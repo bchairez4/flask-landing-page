@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %} Edit {% endblock %}
+
+{% block body %}
+    <h2>Old Post</h2>
+    <h3>{{ post['title'] }}</h3>
+    <p>{{ post['content'] }}</p>
+
+    <form method="post">
+        <div>
+            <label for="title">Updated Title:</label>
+            <input type="text" name="title" placeholder="New Text" value="{{ request.form['title'] }}">
+        </div>
+        <div>
+            <label for="content">Updated Content:</label>
+            <textarea name="content" placeholder="New Content" rows="15">{{ request.form['content'] }}</textarea>
+        </div>
+        <button type="submit">
+            RePost
+        </button>
+    </form>
+{% endblock %}
