@@ -93,6 +93,14 @@ def edit(postID):
 
     return render_template('edit.html', post=post)
 
+@app.route('/<int:postID>/delete', methods=('POST',))
+def delete(postID):
+    conn = get_db_connection()
+    conn.execute('DELETE FROM posts WHERE id = ?', (postID,))
+    conn.commit()
+    conn.close()
+    return redirect(url_for('community'))
+
 def main():
     app.run()
 
