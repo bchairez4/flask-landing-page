@@ -134,16 +134,20 @@ img {
     border-radius: 4px;
     border-collapse: collapse;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding-left: 25px;
+    padding-right: 25px;
 }
 
-.blogPostTitle {
-    /**/
+.blogPost a {
+    width: fit-content;
+    color: hsl(45, 100%, 29%);
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.blogPostContent {
-    /**/
+.blogPost a:hover {
+    color: hsl(261, 98%, 45%);
 }
 
 .blogPostForm {
@@ -196,5 +200,64 @@ img {
     border: none;
     align-self: center;
     margin: 10px;
+    cursor: pointer;
+}
+
+.oldPost {
+    display: block;
+    width: fit-content;
+    border: 1px dashed hsl(261, 98%, 45%);
+    border-radius: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+}
+
+.updateForm {
+    display: grid;
+    grid-template-columns: auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.updateTitleForm {
+    display: grid;
+    grid-template-columns: auto;    
+    margin-bottom: 20px;
+}
+
+.updateTitleForm input {
+    max-width: 40%;
+    margin-top: 5px;
+}
+
+.updateContentForm {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.updateContentForm textarea {
+    resize: none;
+    max-width: 60%;
+    height: 45px;
+    margin-top: 5px;
+}
+
+.editButton {
+    width: 75px;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: 5px;
+    background-color: hsl(42, 100%, 50%);
+    font-size: large;
+    border: none;
+    align-self: center;
+    cursor: pointer;
+}
+
+.deleteButton {
+    background-color: hsl(0, 0%, 92%);
+    border-color: hsl(10, 100%, 45%);
+    color: hsl(10, 100%, 45%);
     cursor: pointer;
 }
