@@ -237,6 +237,7 @@ img {
 }
 
 .updateContentForm textarea {
+    font-family: sans-serif;
     resize: none;
     max-width: 60%;
     height: 45px;
