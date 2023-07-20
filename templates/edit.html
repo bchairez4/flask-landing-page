@@ -9,6 +9,12 @@
         <p>{{ post['content'] }}</p>
     </div>
 
+    {% for message in get_flashed_messages() %}
+        <div class="flashMessage">
+            <i>{{ message }}</i>
+        </div>
+    {% endfor %}
+    
     <form class="updateForm" method="post">
         <div class="updateTitleForm">
             <label for="title">Updated Title:</label>
