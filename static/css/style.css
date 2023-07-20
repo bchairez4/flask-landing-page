@@ -262,3 +262,7 @@ img {
     color: hsl(10, 100%, 45%);
     cursor: pointer;
 }
+
+.flashMessage {
+    color: hsl(10, 100%, 45%);
+}
