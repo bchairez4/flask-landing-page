@@ -13,9 +13,14 @@
         </div>
     {% endfor %}
     
-    <div>
-        <h2>Post to the Community!</h2>
-    </div>
+    <h2>Post to the Community!</h2>
+
+    {% for message in get_flashed_messages() %}
+        <div class="flashMessage">
+            <i>{{ message }}</i>
+        </div>
+    {% endfor %}
+    
     <form class="blogPostForm" method="post">
         <div class="blogPostFormTitle">
             <label for="title">Title:</label>
