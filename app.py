@@ -67,10 +67,10 @@ def community():
             conn.commit()
             conn.close()
             return redirect(url_for('community'))
-    else:
-        conn = get_db_connection()
-        posts = conn.execute('SELECT * FROM posts').fetchall()
-        conn.close() 
+        
+    conn = get_db_connection()
+    posts = conn.execute('SELECT * FROM posts').fetchall()
+    conn.close() 
 
     return render_template('community.html', posts=posts)
 
