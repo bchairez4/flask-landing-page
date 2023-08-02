@@ -7,11 +7,11 @@
         <title>{% block title%} {% endblock%} - Landing Page</title>
     </head>
     <body>
-        <header id="headerBanner">
+        <header id="header-banner">
             <h1>Pet Adoption Landing Page</h1>
             <img src="../static/images/adopt-logo.png" id="logo" alt="logo">
         </header>
-        <div id="navigationBar">
+        <div id="navigation-bar">
             <a href="{{ url_for('index') }}">Home</a>
             <a href="{{ url_for('adopt') }}">Adopt</a>
             <a href="{{ url_for('about') }}">About</a>
