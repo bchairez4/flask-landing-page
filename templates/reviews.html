@@ -5,11 +5,11 @@
 {% block body %}
     <h1> Hear People's Experiences </h1>
     {% for review in reviewList %}
-        <div class="reviewPost">
-            <img class="reviewPostImage" src="{{ review.get('img_src') }}" alt="{{ review.get('petName') }}">
-            <div class="reviewPostInfo">
-                <h2 class="reviewPostTitle">{{ review.get('name') }} & {{ review.get('petName') }}</h2>
-                <h3 class="reviewPostRating">{{ review.get('rating') }}</h3>
+        <div class="review-post">
+            <img class="review-post-image" src="{{ review.get('img_src') }}" alt="{{ review.get('petName') }}">
+            <div class="review-post-info">
+                <h2 class="review-post-title">{{ review.get('name') }} & {{ review.get('petName') }}</h2>
+                <h3 class="review-post-rating">{{ review.get('rating') }}</h3>
                 <p>
                     Proin aliquam lorem vitae neque ultricies pretium. Morbi eu rhoncus massa, non dictum orci. Maecenas consectetur cursus posuere. Cras cursus viverra metus, et ullamcorper velit pellentesque non. Integer velit sem, vestibulum at est euismod, fermentum convallis ante. Etiam iaculis odio et tortor cursus, non commodo ante finibus. Nam faucibus, mauris vitae mollis tempus, eros justo consectetur magna, at iaculis diam metus aliquet augue. Nulla sollicitudin elit at nisi ultrices, sit amet aliquam leo rutrum.
                 </p>
