@@ -5,14 +5,14 @@
 {% block body %}
     <h1>Adopt a Loved One</h1>
     {% for adopt in adoptionList %}
-        <div class="adoptPost">
-            <h2 class="petPostName">{{ adopt.get('name') }} ({{ adopt.get('animal')|title }}) - Age: {{ adopt.get('age') }}</h2>
-            <img class="adoptPostImage" src="{{ adopt.get('img_src') }}" alt="{{ adopt.get('name') }}" >
+        <div class="adopt-post">
+            <h2 class="pet-post-name">{{ adopt.get('name') }} ({{ adopt.get('animal')|title }}) - Age: {{ adopt.get('age') }}</h2>
+            <img class="adopt-post-image" src="{{ adopt.get('img_src') }}" alt="{{ adopt.get('name') }}" >
             <p>
                 <i>Adopt {{adopt.get('name')}} today and give this {{adopt.get('breed')}} a new home!</i>
             </p>
-            <div class="adoptPostInfo">
-                <h3 class="adoptPostMore">More about {{ adopt.get('name') }}</h3>
+            <div class="adopt-post-info">
+                <h3 class="adopt-post-more">More about {{ adopt.get('name') }}</h3>
                 <p>
                     In sit amet ultrices nisi, condimentum scelerisque nibh. Praesent faucibus dictum lorem, sit amet ultricies odio semper ac. Sed non est porta, malesuada risus non, vulputate tellus. Vivamus imperdiet tortor eu purus dignissim, quis molestie enim sollicitudin. Cras nisl tellus, ultricies sed bibendum quis, tincidunt non risus. Cras justo massa, aliquam a pulvinar eget, blandit ut diam. Cras tincidunt est enim, vel aliquet leo fermentum eu. Integer ultrices sapien nec tellus mattis blandit. Vivamus nec faucibus felis, non dignissim lorem. Vivamus at eleifend odio, at ultrices nisl. Donec efficitur tortor sed purus viverra pulvinar. Sed ullamcorper in nunc eu pretium. Donec mollis dui pharetra, congue justo egestas, dapibus arcu. Maecenas bibendum nisl eget mauris suscipit, nec imperdiet enim tempus. Mauris rhoncus, odio a cursus rutrum, lorem tortor feugiat purus, sit amet blandit risus est ac augue. Curabitur quis elementum tellus, non maximus magna.
                 </p>
