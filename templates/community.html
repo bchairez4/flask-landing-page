@@ -5,7 +5,7 @@
 {% block body %}
     <h1>Community Blog</h1>
     {% for post in posts %}
-        <div class="blogPost">
+        <div class="blog-post">
             <a href="{{ url_for('edit', postID=post['id']) }}">
                 <h2>{{ post['title'] }}</h2>
             </a>
@@ -16,21 +16,21 @@
     <h2>Post to the Community!</h2>
 
     {% for message in get_flashed_messages() %}
-        <div class="flashMessage">
+        <div class="flash-message">
             <i>{{ message }}</i>
         </div>
     {% endfor %}
     
-    <form class="blogPostForm" method="post">
-        <div class="blogPostFormTitle">
+    <form class="blog-post-form" method="post">
+        <div class="blog-post-form-title">
             <label for="title">Title:</label>
-            <input class="blogPostFormTitleBox" type="text" name="title" placeholder="Post Title" value="{{ request.form['title'] }}">
+            <input class="blog-post-form-title-box" type="text" name="title" placeholder="Post Title" value="{{ request.form['title'] }}">
         </div>
-        <div class="blogPostFormContent">
+        <div class="blog-post-form-content">
             <label for="content">Content:</label>
-            <textarea class="blogPostFormContentBox" name="content" placeholder="Post Content" rows="5">{{ request.form['content'] }}</textarea>
+            <textarea class="blog-post-form-content-box" name="content" placeholder="Post Content" rows="5">{{ request.form['content'] }}</textarea>
         </div>
-        <button class="blogPostFormSubmit" type="submit">
+        <button class="blog-post-form-submit" type="submit">
             Post
         </button>
     </form>
