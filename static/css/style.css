@@ -29,13 +29,13 @@ img {
     padding-bottom: 5px;
 }
 
-#navigationBar {
+#navigation-bar {
     background-color: hsl(230, 27%, 75%);
     position: sticky;
     top: 0;
 }
 
-#navigationBar a {
+#navigation-bar a {
     color: hsl(209, 29%, 18%);
     text-decoration: none;
     font-size: 20px;
@@ -44,7 +44,7 @@ img {
     padding: 20px;
 }
 
-#navigationBar a:hover {
+#navigation-bar a:hover {
     color: hsl(10, 100%, 45%);
 }
 
@@ -53,7 +53,7 @@ img {
     padding-right: 15%;
 }
 
-#headerBanner {
+#header-banner {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -66,70 +66,70 @@ img {
     padding-left: 15px;
 }
 
-.sectionTitle {
+.section-title {
     color: hsl(44, 100%, 28%);
     font-size: x-large;
     padding-top: 5px;
     margin: 0;
 }
 
-.adoptPost {
+.adopt-post {
     display: flex;
     flex-direction: column;
     padding-bottom: 45px;
 }
 
-.petPostName {
+.pet-post-name {
     font-family: Arial, Helvetica, sans-serif;
     color: hsl(45, 100%, 29%);
     padding-bottom: 10px;
     margin: 0;
 }
 
-.adoptPostImage {
+.adopt-post-image {
     width: 500px;
     height: auto;
 }
 
-.adoptPostInfo {
+.adopt-post-info {
     display: grid;
     grid-template-columns: auto;
 }
 
-.adoptPostMore {
+.adopt-post-more {
     margin-bottom: 0;
 }
 
-.reviewPost {
+.review-post {
     display: grid;
     grid-template-rows: 125px;
     padding-bottom: 150px;
 }
 
-.reviewPostImage {
+.review-post-image {
     width: 450px;
     height: 450px;
     padding-bottom: 50px;
 }
 
-.reviewPostInfo {
+.review-post-info {
     font-family: Georgia, 'Times New Roman', Times, serif;
     display: grid;
     grid-template-columns: 600px;
     padding-left: 500px;
 }
 
-.reviewPostTitle {
+.review-post-title {
     font-size: xx-large;
     color: hsl(261, 98%, 45%);
 }
 
-.reviewPostRating {
+.review-post-rating {
     font-size: x-large;
     margin: 0;
 }
 
-.blogPost {
+.blog-post {
     border: 2px hsl(0, 0%, 11%) solid;
     border-radius: 4px;
     border-collapse: collapse;
@@ -139,59 +139,59 @@ img {
     padding-right: 25px;
 }
 
-.blogPost a {
+.blog-post a {
     width: fit-content;
     color: hsl(45, 100%, 29%);
     text-decoration: none;
     font-weight: bold;
 }
 
-.blogPost a:hover {
+.blog-post a:hover {
     color: hsl(261, 98%, 45%);
 }
 
-.blogPostForm {
+.blog-post-form {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.blogPostFormTitle {
+.blog-post-form-title {
     display: grid;
     grid-template-columns: 75px 520px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.blogPostFormContent {
+.blog-post-form-content {
     display: grid;
     grid-template-columns: 75px 600px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.blogPostFormTitleBox {
+.blog-post-form-title-box {
     resize: none;
     width: 65%;
 }
 
-.blogPostFormContentBox {
+.blog-post-form-content-box {
     resize: none;
     width: 95%; 
     font-family: sans-serif;
 }
 
-.blogPostFormTitleBox:focus {
+.blog-post-form-title-box:focus {
     outline: none;
     border: 2px solid hsl(261, 98%, 45%);;
 }
 
-.blogPostFormContentBox:focus {
+.blog-post-form-content-box:focus {
     outline: none;
     border: 2px solid hsl(261, 98%, 45%);
 }
 
-.blogPostFormSubmit {
+.blog-post-form-submit {
     width: 75px;
     height: 35px;
     color: hsl(249, 70%, 26%);
@@ -203,7 +203,7 @@ img {
     cursor: pointer;
 }
 
-.oldPost {
+.old-post {
     display: block;
     width: fit-content;
     border: 1px dashed hsl(261, 98%, 45%);
@@ -213,30 +213,30 @@ img {
     margin-bottom: 15px;
 }
 
-.updateForm {
+.update-form {
     display: grid;
     grid-template-columns: auto;
     margin-top: 30px;
     margin-bottom: 40px;
 }
 
-.updateTitleForm {
+.update-title-form {
     display: grid;
     grid-template-columns: auto;    
     margin-bottom: 20px;
 }
 
-.updateTitleForm input {
+.update-title-form input {
     max-width: 40%;
     margin-top: 5px;
 }
 
-.updateContentForm {
+.update-content-form {
     display: grid;
     grid-template-columns: auto;
 }
 
-.updateContentForm textarea {
+.update-content-form textarea {
     font-family: sans-serif;
     resize: none;
     max-width: 60%;
@@ -244,7 +244,7 @@ img {
     margin-top: 5px;
 }
 
-.editButton {
+.edit-button {
     width: 75px;
     height: 35px;
     margin-top: 20px;
@@ -256,13 +256,13 @@ img {
     cursor: pointer;
 }
 
-.deleteButton {
+.delete-button {
     background-color: hsl(0, 0%, 92%);
     border-color: hsl(10, 100%, 45%);
     color: hsl(10, 100%, 45%);
     cursor: pointer;
 }
 
-.flashMessage {
+.flash-message {
     color: hsl(10, 100%, 45%);
 }
