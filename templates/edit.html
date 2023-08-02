@@ -4,34 +4,34 @@
 
 {% block body %}
     <h1>Update Post</h1>
-    <div class="oldPost">
+    <div class="old-post">
         <h4>{{ post['title'] }}</h4>
         <p>{{ post['content'] }}</p>
     </div>
 
     {% for message in get_flashed_messages() %}
-        <div class="flashMessage">
+        <div class="flash-message">
             <i>{{ message }}</i>
         </div>
     {% endfor %}
     
-    <form class="updateForm" method="post">
-        <div class="updateTitleForm">
+    <form class="update-form" method="post">
+        <div class="update-title-form">
             <label for="title">Updated Title:</label>
             <input type="text" name="title" placeholder="New Text" value="{{ request.form['title'] }}">
         </div>
-        <div class="updateContentForm">
+        <div class="update-content-form">
             <label for="content">Updated Content:</label>
             <textarea name="content" placeholder="New Content" cols="20">{{ request.form['content'] }}</textarea>
         </div>
-        <button class="editButton" type="submit">
+        <button class="edit-button" type="submit">
             RePost
         </button>
     </form>
 
     <h2>Delete Post</h2>
     <form action="{{ url_for('delete', postID=post['id']) }}" method="post">
-        <button class="deleteButton" type="submit" onclick="return confirm('Are you sure you want to delete the entire post?')">
+        <button class="delete-button" type="submit" onclick="return confirm('Are you sure you want to delete the entire post?')">
             Delete Post
         </button>
     </form>
