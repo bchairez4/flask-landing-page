@@ -1,4 +1,4 @@
-# flask-landing-page
+# flask-web-app
 
 Created by Brian Chairez
 
